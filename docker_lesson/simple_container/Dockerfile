@@ -10,5 +10,7 @@ ADD . /app
 # Flaskをインストール
 RUN pip install Flask
 
+EXPOSE 80
+
 # コンテナの実行コマンドを指定
 CMD ["python", "app.py"]

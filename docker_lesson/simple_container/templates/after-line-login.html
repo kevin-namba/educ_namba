@@ -1,18 +1,22 @@
 <html>
 <head>
-<title>{{ title }}</title>
+<title>test</title>
 </head>
 <body>
-Hello
+LINE連携しました
 {{ name }}さん。
 学年{{ grade }}
+<input type="text" name="form_name" id="form_name">
 <input type="button" value="button" onclick="buttonClick()">
 </body>
 </html>
 <script>
+</script>
+<script>
     function buttonClick(){
         param = location.search
+        message = document.getElementById("form_name").value
         console.log(param)
-        location.href=('/line-auth'+param)
+        location.href=('/send-message-form'+param+"&message="+message)
     }
 </script>
